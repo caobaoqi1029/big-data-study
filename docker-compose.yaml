@@ -1,0 +1,57 @@
+services:
+    master:
+        image: caobaoqi1029/big-data-study:0.1.0
+        container_name: master
+        hostname: master
+        ports:
+            - "8020:8020"   # HDFS NameNode 主服务端口
+            - "9870:9870"   # HDFS NameNode Web UI
+            - "8088:8088"   # YARN ResourceManager Web UI
+            - "8042:8042"   # YARN NodeManager Web UI
+        command: bash -c "/root/scripts/start_node.sh master 1"
+        volumes:
+            - ./:/root/code-dev
+            - ~/.m2:/root/.m2
+        networks:
+            - hadoop-network
+        depends_on:
+            - slave1
+            - slave2
+            - slave3
+
+    slave1:
+        image: caobaoqi1029/big-data-study:0.1.0
+        container_name: slave1
+        hostname: slave1
+        command: bash -c "/root/scripts/start_node.sh slave 2"
+        networks:
+            - hadoop-network
+
+    slave2:
+        image: caobaoqi1029/big-data-study:0.1.0
+        container_name: slave2
+        hostname: slave2
+        command: bash -c "/root/scripts/start_node.sh slave 3"
+        networks:
+            - hadoop-network
+
+    slave3:
+        image: caobaoqi1029/big-data-study:0.1.0
+        container_name: slave3
+        hostname: slave3
+        command: bash -c "/root/scripts/start_node.sh slave 4"
+        networks:
+            - hadoop-network
+
+    firefox:
+        image: jlesage/firefox
+        container_name: firefox
+        hostname: firefox
+        ports:
+            - "5800:5800" # VNC server port for Firefox
+        networks:
+            - hadoop-network
+
+networks:
+    hadoop-network:
+        driver: bridge
