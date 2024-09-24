@@ -18,10 +18,11 @@ TODO
 ## Installation 📦
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/caobaoqi1029/big-data-study.git --depth=1
-   cd caobaoqi1029/big-data-study
-   ```
+
+```bash
+git clone https://github.com/caobaoqi1029/big-data-study.git --depth=1
+ cd caobaoqi1029/big-data-study
+```
 
 ---
 
