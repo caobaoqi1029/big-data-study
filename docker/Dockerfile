@@ -19,24 +19,24 @@ RUN bash -c "source /root/.sdkman/bin/sdkman-init.sh && \
     sdk install maven 3.6.3"
 
 # 下载并解压 Hadoop
-#RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
-COPY hadoop-3.3.6.tar.gz .
+RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+#COPY hadoop-3.3.6.tar.gz .
 RUN tar -xzvf hadoop-3.3.6.tar.gz && \
     rm hadoop-3.3.6.tar.gz && \
     mv hadoop-3.3.6 hadoop && \
     chmod -R 777 hadoop
 
 # 下载并解压 Zookeeper
-#RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.9.2/apache-zookeeper-3.9.2-bin.tar.gz
-COPY apache-zookeeper-3.9.2-bin.tar.gz .
+RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.9.2/apache-zookeeper-3.9.2-bin.tar.gz
+#COPY apache-zookeeper-3.9.2-bin.tar.gz .
 RUN tar -xzvf apache-zookeeper-3.9.2-bin.tar.gz && \
     rm apache-zookeeper-3.9.2-bin.tar.gz && \
     mv apache-zookeeper-3.9.2-bin zookeeper && \
     chmod -R 777 zookeeper
 
 # 下载并解压 Hbase
-#RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.5.10/hbase-2.5.10-bin.tar.gz
-COPY hbase-2.5.10-bin.tar.gz .
+RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.5.10/hbase-2.5.10-bin.tar.gz
+#COPY hbase-2.5.10-bin.tar.gz .
 RUN tar -xzvf hbase-2.5.10-bin.tar.gz && \
     rm hbase-2.5.10-bin.tar.gz && \
     mv hbase-2.5.10 hbase && \
