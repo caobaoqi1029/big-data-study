@@ -104,6 +104,7 @@ RUN mkdir /root/zookeeper/tmp
 RUN cp /root/zookeeper/conf/zoo_sample.cfg /root/zookeeper/conf/zoo.cfg
 COPY zookeeper_config/* /root/zookeeper/conf/
 RUN echo "export HADOOP_CLASSPATH=`hadoop classpath`" >> /root/.bashrc
+RUN echo "export CLASSPATH=$CLASSPATH:/tmp/" >> /root/.bashrc
 
 # 配置 Hbase
 COPY hbase_config/* /root/hbase/conf
