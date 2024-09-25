@@ -15,6 +15,7 @@
 2. build jar and run it
 
    ```bash
+   mvn install
    cd @code
    mvn clean package
    cd target/
