@@ -42,3 +42,8 @@ out/
 target
 /input.txt
 
+/docker/apache-zookeeper-3.9.2-bin.tar.gz
+/docker/hadoop-3.3.6.tar.gz
+/docker/hbase-2.5.10-bin.tar.gz
+/docker/kafka_2.12-3.7.1.tgz
+/assets/

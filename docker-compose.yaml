@@ -10,7 +10,8 @@ services:
             - "8042:8042"   # YARN NodeManager Web UI
         command: bash -c "/root/scripts/start_node.sh master 1"
         volumes:
-            - ./:/root/code-dev
+            - ./src:/root/@code/src
+            - ./pom.xml:/root/@code/pom.xml
             - ~/.m2:/root/.m2
         networks:
             - hadoop-network
