@@ -750,3 +750,9 @@ jps
 ## 访问 http://localhost:8042/
 
 ![image-20240924153727767](https://mcddhub-1311841992.cos.ap-beijing.myqcloud.com/picgo/202409241537584.png)
+
+## 通过访问容器内 firefox 进行验证 http://localhost:5800/
+
+- http://master:8088
+
+![image-20240924191331370](https://mcddhub-1311841992.cos.ap-beijing.myqcloud.com/picgo/202409241913194.png)

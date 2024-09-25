@@ -15,7 +15,7 @@
 2. build jar and run it
 
    ```bash
-   cd code-dev
+   cd @code
    mvn clean package
    cd target/
    hadoop jar big-data.jar
@@ -49,8 +49,7 @@
 > [!TIP]
 >
 > - 需要 vscode 中安装 Extension Pack for Java 拓展
-> - 需要完成上述操作 (单词计数)
 > - 确保 `export CLASSPATH=$CLASSPATH:/tmp/` 正确写入到 .bashrc
 
-
+![image-20240925093242404](https://mcddhub-1311841992.cos.ap-beijing.myqcloud.com/picgo/202409250932723.png)
 
